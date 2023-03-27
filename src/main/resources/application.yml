@@ -1,0 +1,24 @@
+server:
+  port: 8086
+
+
+
+
+spring:
+  application:
+    name: mywallet
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/wallet?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+
+
+mybatis-plus:
+  #配置mapper的映射文件
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+  #配置mybatis数据返回类型别名
+  type-aliases-package: com.mzf.wallet.entity
+  configuration:
+    map-underscore-to-camel-case: true
